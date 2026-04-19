@@ -27,10 +27,10 @@ let handler = async (m, { conn, usedPrefix }) => {
     ]
     let video = videos[Math.floor(Math.random() * videos.length)]
 const emojis = {
-  'main': '🎄', 'tools': '🧰', 'audio': '🎶', 'group': '🎁',
+  'main': '🐉', 'tools': '🌀', 'audio': '🎶', 'group': '🐉',
   'owner': '👑', 'fun': '🎮', 'info': '📘', 'internet': '🌐',
-  'downloads': '⬇️', 'admin': '🧦', 'anime': '✨', 'nsfw': '🚫',
-  'search': '🔍', 'sticker': '🖼️', 'game': '🕹️', 'premium': '💎', 'bot': '🤖'
+  'downloads': '⬇️', 'admin': '🧦', 'anime': '🐉', 'nsfw': '🚫',
+  'search': '🔍', 'sticker': '🔪', 'game': '🕹️', 'premium': '💎', 'bot': '🤖'
 }
 
 let grupos = {}
@@ -95,7 +95,7 @@ ${ucapan()} @${userId.split('@')[0]}
 ${secciones}
 `.trim()
 
-await m.react('🍂')
+await m.react('🐉')
 
 await conn.sendMessage(
   m.chat,
@@ -149,9 +149,9 @@ function clockString(ms) {
 
 function ucapan() {
   const time = moment.tz('America/Lima').format('HH')
-  let res = "ʙᴜᴇɴᴀs ɴᴏᴄʜᴇs 🌙"
-  if (time >= 5 && time < 12) res = "ʙᴜᴇɴᴏs ᴅɪᴀs ☀️"
-  else if (time >= 12 && time < 18) res = "ʙᴜᴇɴᴀs ᴛᴀʀᴅᴇs 🌤️"
-  else if (time >= 18) res = "ʙᴜᴇɴᴀs ɴᴏᴄʜᴇs 🌙"
+  let res = "ʙᴜᴇɴᴀs ɴᴏᴄʜᴇs 🐉"
+  if (time >= 5 && time < 12) res = "ʙᴜᴇɴᴏs ᴅɪᴀs 🌀"
+  else if (time >= 12 && time < 18) res = "ʙᴜᴇɴᴀs ᴛᴀʀᴅᴇs 🌀"
+  else if (time >= 18) res = "ʙᴜᴇɴᴀs ɴᴏᴄʜᴇs 🐉"
   return res
 }
