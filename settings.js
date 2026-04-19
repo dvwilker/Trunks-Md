@@ -39,10 +39,10 @@ global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
-global.community = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
-global.channel = "https://whatsapp.com/channel/0029VbBGlokA89MliWWv1x16"
-global.github = "https://github.com/dvwilker/"
+global.group = "https://chat.whatsapp.com/BsxkUgzuV8aEvQ1Z7xOEXp?mode=gi_t"
+global.community = "https://chat.whatsapp.com/HYcKNQtGxaBGlWY1mmcyq1"
+global.channel = "https://whatsapp.com/channel/0029Vb7ntULLY6d8uOvyDy0C"
+global.github = "https://github.com/dvwilker/Trunks-Md"
 global.gmail = "developer.wilker.ofc@gmail.com"
 global.ch = {
 ch1: "120363404707199986@newsletter"
