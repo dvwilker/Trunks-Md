@@ -5,9 +5,10 @@ import fs from "fs"
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-//BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
-//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botNumber = "" //Ejemplo: 573218138672
+// CONFIGURACIÓN TRUNKS MD - MODO VIAJERO DEL TIEMPO
+// Si quieres evitar escribir el número que será bot en la consola, agrégalo aquí:
+// Solo aplica para opción 2 (ser bot con código de texto de 8 dígitos)
+global.botNumber = "" // Ejemplo: 573218138672
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -19,19 +20,19 @@ global.prems = []
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.8.2 • Latest"
-global.nameqr = "ɢᴏᴊᴏ-ʙᴏᴛ ᴍᴅ"
+global.nameqr = "⚡ 𝚃𝚁𝚄𝙽𝙺𝚂-𝙼𝙳 ⚡"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
 global.kanekiAIJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botname = "𖹭  ׄ  ְ 🌱 𝐆𝐨𝐣𝐨𝐁𝐨𝐭-𝐌𝐃 ✩"
-global.textbot = "gσᴊσ вσт ν3 • мα∂є ву ¢αяℓσѕ.яν"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝙲𝙰𝚁𝙻𝙾𝚂.𝚁𝚅"
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ ƈαɾʅσʂ.ɾʋ"
-global.etiqueta = "✫ᴄᴀʀʟᴏs ʀᴀᴍɪʀᴇᴢ❄️ ⊹꙰ "
-global.currency = "g᥆𝗍іᥴᥲs"
+global.botname = "⚡ 𝗧𝗿𝘂𝗻𝗸𝘀 𝗠𝗗 ✨"
+global.textbot = "⚡ 𝚃𝚁𝚄𝙽𝙺𝚂 𝙼𝙳 • 𝙼𝙾𝙳𝙾 𝚅𝙸𝙰𝙹𝙴𝚁𝙾 𝙳𝙴𝙻 𝚃𝙸𝙴𝙼𝙿𝙾 ⏳"
+global.dev = "© ⚡ 𝙿𝙾𝙳𝙴𝚁𝙰𝙳𝙾 𝙿𝙾𝚁 𝚃𝚁𝚄𝙽𝙺𝚂 - 𝙳𝚁𝙰𝙶𝙾𝙽 𝙱𝙰𝙻𝙻 ⏳"
+global.author = "© 𝙲𝚁𝙴𝙰𝙳𝙾 𝙲𝙾𝙽 𝙴𝙻 𝙿𝙾𝙳𝙴𝚁 𝙳𝙴𝙻 𝙵𝚄𝚃𝚄𝚁𝙾"
+global.etiqueta = "⚡𝚃𝚁𝚄𝙽𝙺𝚂⚡"
+global.currency = "⏳ 𝚌𝚛𝚘𝚗𝚘𝚌𝚛𝚎𝚍𝚒𝚝𝚘𝚜 ⏳"
 global.banner = "https://raw.githubusercontent.com/AkiraDevX/uploads/main/uploads/1767454349524_108341.jpeg"
 global.icono = "https://raw.githubusercontent.com/Dev-lxyz/upload/main/uploads/vdoua.jpeg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
@@ -41,8 +42,8 @@ global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 global.group = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
 global.community = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
 global.channel = "https://whatsapp.com/channel/0029VbBGlokA89MliWWv1x16"
-global.github = "https://github.com/Carlos13ra/GOJOBOT-MD"
-global.gmail = "shadowcore.xyz@gmail.com"
+global.github = "https://github.com/Carlos13ra/TRUNKS-MD"
+global.gmail = "trunks.md@dragónball.com"
 global.ch = {
 ch1: "120363421367237421@newsletter"
 }
@@ -63,9 +64,62 @@ light: { url: "https://api--shadowcorexyz.replit.app", key: null }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
+// MODO TRUNKS - PODER DEL FUTURO
+global.trunksMode = {
+  activado: true,
+  nivelPoder: "SOBRE 9000 ⏳",
+  energia: "CRONOENERGÍA INFINITA",
+  modo: "TRUNKS - VIAJERO DEL TIEMPO",
+  espada: "ESPADA DEL FUTURO 🗡️",
+  habilidades: [
+    "⚡ Corte Dimensional",
+    "🌀 Viaje en el Tiempo",
+    "🔥 Explosión de Energía Futura",
+    "✨ Protección Temporal",
+    "💥 Ataque Final Trunks"
+  ]
+}
+
+//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+
+// MENSAJES ÉPICOS MODO TRUNKS
+global.welcome = {
+  activado: true,
+  mensaje: `⏳ *¡NUEVO GUERRERO DETECTADO EN LA LÍNEA TEMPORAL!* ⏳\n\n⚡ Nombre: @user\n🗡️ Rango: Aprendiz del Tiempo\n⏳ Poder: En desarrollo\n🌀 Estado: Protegido por Trunks\n\n✨ *¡Bienvenido a la línea temporal!* ✨`
+}
+
+global.leave = {
+  activado: true,
+  mensaje: `⚡ *UN GUERRERO HA CAMBIADO DE LÍNEA TEMPORAL* ⚡\n\n🗡️ Guerrero: @user\n⏳ Destino: Otra dimensión\n🌀 El tiempo siempre lo recordará\n\n✨ *Que el futuro te sea favorable* ✨`
+}
+
+//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+
+// LOG DE INICIO - PODER DEL FUTURO
+console.log(chalk.bold.cyan('\n⏳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━⏳'))
+console.log(chalk.bold.magenta('     ⚡ TRUNKS MD - MODO VIAJERO DEL TIEMPO ⚡     '))
+console.log(chalk.bold.yellow('        🗡️ EL PODER DEL FUTURO HA LLEGADO 🗡️        '))
+console.log(chalk.bold.cyan('⏳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━⏳\n'))
+
+console.log(chalk.green('⏳ Activando cronoenergía...'))
+console.log(chalk.yellow(`⚡ Nivel de poder: ${global.trunksMode.nivelPoder}`))
+console.log(chalk.magenta(`🗡️ Modo: ${global.trunksMode.modo}`))
+console.log(chalk.red(`🔥 Espada: ${global.trunksMode.espada}\n`))
+
+console.log(chalk.blue('📜 Habilidades del futuro desbloqueadas:'))
+global.trunksMode.habilidades.forEach((hab, i) => {
+  console.log(chalk.white(`   ${i + 1}. ${hab}`))
+})
+
+console.log(chalk.bold.green('\n✅ TRUNKS MD LISTO PARA DEFENDER LA LÍNEA TEMPORAL! 🗡️⏳\n'))
+
+//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
 unwatchFile(file)
-console.log(chalk.redBright("Update 'configXD.js'"))
+console.log(chalk.redBright("⚡ Actualizando configuración de Trunks MD..."))
 import(`${file}?update=${Date.now()}`)
 })
+
+//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
