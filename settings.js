@@ -12,8 +12,8 @@ global.botNumber = "" // Ejemplo: 573218138672
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.owner = ["51963315293", "51963315293", "51963315293"]
-global.suittag = ["51963315293"] 
+global.owner = ["5492644138998", "584125877491", "584162060060"]
+global.suittag = ["5492644138998"] 
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -42,10 +42,10 @@ global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 global.group = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
 global.community = "https://chat.whatsapp.com/IDo5RtlTvyt59hqj7E9O28?mode=wwt"
 global.channel = "https://whatsapp.com/channel/0029VbBGlokA89MliWWv1x16"
-global.github = "https://github.com/Carlos13ra/TRUNKS-MD"
-global.gmail = "trunks.md@dragónball.com"
+global.github = "https://github.com/dvwilker/"
+global.gmail = "developer.wilker.ofc@gmail.com"
 global.ch = {
-ch1: "120363421367237421@newsletter"
+ch1: "120363404707199986@newsletter"
 }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
