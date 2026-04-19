@@ -84,13 +84,13 @@ ${ucapan()} @${userId.split('@')[0]}
 ⏰ 🄵🄴🄲🄷🄰 🅈 🄷🄾🅁🄰 
 ────────────────
 🕝 𝐇𝐎𝐑𝐀: ${hora}
-📅 𝐅𝐄𝐂𝐇𝐀: ${fecha}
-🏙️ 𝐃𝐈𝐀: ${dia}
+📅 : ${fecha}
+🏙️ 𝙳𝙸𝙰: ${dia}
 ────────────────
 GOJO BOT • SISTEMA ACTIVO
 © 2025 - 2026 Powered By Carlos Ramírez
 ────────────────
-📂 🄲🄾🄼🄰🄽🄳🄾🅂
+📂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂
 ────────────────
 ${secciones}
 `.trim()
