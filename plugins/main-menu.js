@@ -58,7 +58,7 @@ const secciones = Object.entries(grupos).map(([tag, cmds]) => {
 
 let menuText = `
 ╔══════════════╗
-  🍃 GOJOBOT - MD 🍂
+ 🌀 𝚃𝚁𝚄𝙽𝙺𝚂 𝙼𝙳 🐉
 ╚══════════════╝
 
 ${ucapan()} @${userId.split('@')[0]}
@@ -87,8 +87,8 @@ ${ucapan()} @${userId.split('@')[0]}
 📅 : ${fecha}
 🏙️ 𝙳𝙸𝙰: ${dia}
 ────────────────
-GOJO BOT • SISTEMA ACTIVO
-© 2025 - 2026 Powered By Carlos Ramírez
+𝚃𝚁𝚄𝙽𝙺𝚂 𝙼𝙳• 𝚂𝙸𝚂𝚃𝙴𝙼𝙰 𝙰𝙲𝚃𝙸𝚅𝙾
+© 𝟸𝟶𝟸𝟻 - 𝟸𝟶𝟸𝟼 𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 𝙳𝚅𝚆𝙸𝙻𝙺𝙴𝚁 
 ────────────────
 📂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂
 ────────────────
