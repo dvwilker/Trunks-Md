@@ -50,10 +50,10 @@ for (let tag in grupos) {
 }
 
 const secciones = Object.entries(grupos).map(([tag, cmds]) => {
-  const emoji = emojis[tag] || '⭐'
-      return `╭━━🍃 ${tag.toUpperCase()} 🍂━⬣\n`
+  const emoji = emojis[tag] || '🌀'
+      return `╭━━🐉 ${tag.toUpperCase()} 🐉━⬣\n`
      + cmds.map(cmd => `┃ ➩ ${cmd}`).join('\n') 
-     + `\n╰━🍂〔 🥭 〕🍃━⬣`
+     + `\n╰━🌀〔 🐉 〕🍃━⬣`
     }).join('\n\n')
 
 let menuText = `
@@ -64,17 +64,17 @@ let menuText = `
 ${ucapan()} @${userId.split('@')[0]}
 
 ────────────────
-👤 🄸🄽🄵🄾 🄳🄴🄻 🅄🅂🄴🅁
+👤 𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝚄𝚂𝙴𝚁
 ────────────────
 👤 𝚄𝚂𝙴𝚁: ${name}
 💎 𝙽𝙸𝚅𝙴𝙻: ${level}
 🗿 𝙴𝚇𝙿𝙴𝚁𝙸𝙴𝙽𝙲𝙸𝙰: ${exp}
-🥵 𝚁𝙰𝙽𝙶𝙾: 𝚂𝚄𝙿𝙴𝚁 𝚂𝙰𝙸𝚈𝙰𝙽
+🐉 𝚁𝙰𝙽𝙶𝙾: 𝚂𝚄𝙿𝙴𝚁 𝚂𝙰𝙸𝚈𝙰𝙽
 
 ────────────────
-🤖 🄸🄽🄵🄾 🄳🄴🄻 🄱🄾🅃
+🤖 𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃
 ────────────────
-🥭 𝐎𝐖𝐍𝐄𝐑: wa.me/${suittag}
+🐉 𝐎𝐖𝐍𝐄𝐑: wa.me/${suittag}
 🎧 𝐄𝐒𝐓𝐀𝐃𝐎: ${(conn.user.jid == global.conn.user.jid ? '𝚂𝙰𝙸𝚈𝙰𝙽 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 🐉' : '𝚂𝙰𝙸𝚈𝙰𝙽 𝚂𝚄𝙱 𝙱𝙾𝚃 🌀')}
 🎉 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒: ${totalCommands}
 👥 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒: ${totalreg}
