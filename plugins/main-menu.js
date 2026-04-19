@@ -75,7 +75,7 @@ ${ucapan()} @${userId.split('@')[0]}
 🤖 🄸🄽🄵🄾 🄳🄴🄻 🄱🄾🅃
 ────────────────
 🥭 𝐎𝐖𝐍𝐄𝐑: wa.me/${suittag}
-🎧 𝐄𝐒𝐓𝐀𝐃𝐎: ${(conn.user.jid == global.conn.user.jid ? 'BOT OFICIAL 🥭' : 'SUB BOT 🍐')}
+🎧 𝐄𝐒𝐓𝐀𝐃𝐎: ${(conn.user.jid == global.conn.user.jid ? '𝚂𝙰𝙸𝚈𝙰𝙽 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 🐉' : '𝚂𝙰𝙸𝚈𝙰𝙽 𝚂𝚄𝙱 𝙱𝙾𝚃 🌀')}
 🎉 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒: ${totalCommands}
 👥 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒: ${totalreg}
 ⏳ 𝐔𝐏𝐓𝐈𝐌𝐄: ${uptime}
