@@ -77,8 +77,8 @@ ${ucapan()} @${userId.split('@')[0]}
 🐉 𝙾𝚆𝙽𝙴𝚁: wa.me/${suittag}
 🎧 𝙴𝚂𝚃𝙰𝙳𝙾: ${(conn.user.jid == global.conn.user.jid ? '𝚂𝙰𝙸𝚈𝙰𝙽 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 🐉' : '𝚂𝙰𝙸𝚈𝙰𝙽 𝚂𝚄𝙱 𝙱𝙾𝚃 🌀')}
 🎉 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂: ${totalCommands}
-👥 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒: ${totalreg}
-⏳ 𝐔𝐏𝐓𝐈𝐌𝐄: ${uptime}
+👥 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂: ${totalreg}
+⏳ 𝚄𝙿𝚃𝙸𝙼𝙴: ${uptime}
 
 ────────────────
 ⏰ 𝙵𝙴𝙲𝙷𝙰 𝚈 𝙷𝙾𝚁𝙰 
