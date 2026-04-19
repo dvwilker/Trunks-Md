@@ -33,11 +33,11 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 let { say } = cfonts
 console.log(chalk.magentaBright('\n🌾 Iniciando...'))
-say('Gojobot-MD', {
+say('Trunks-MD', {
 align: 'center',           
 gradient: ['red', 'blue'] 
 })
-say('Made With Carlos.xyz', {
+say('Made With Trunks.xyz', {
 font: 'console',
 align: 'center',
 gradient: ['blue', 'magenta']
@@ -328,7 +328,6 @@ const [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
 const s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
 Object.freeze(global.support)
 }
-// Tmp
 setInterval(async () => {
 const tmpDir = join(__dirname, 'tmp')
 try {
