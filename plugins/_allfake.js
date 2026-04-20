@@ -19,17 +19,17 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
-var canal = 'https://whatsapp.com/channel/0029VbC34Nt42DchIWA0q11f' 
-var canal2 = 'https://whatsapp.com/channel/0029Vb6l62A5a240y2ClLp1M'
-var comunidad = 'https://whatsapp.com/channel/0029VbC34Nt42DchIWA0q11f'
-var git = 'https://github.com/Shadow-nex'
-var github = 'https://github.com/Carlos13ra/GOJOBOT-MD' 
-var correo = 'shadowcore.xyz@gmail.com'
+var canal = 'https://whatsapp.com/channel/0029Vb7ntULLY6d8uOvyDy0C' 
+var canal2 = 'https://whatsapp.com/channel/0029Vb7ntULLY6d8uOvyDy0C'
+var comunidad = 'https://chat.whatsapp.com/BsxkUgzuV8aEvQ1Z7xOEXp?mode=gi_t'
+var git = 'https://github.com/dvwilker'
+var github = 'https://github.com/dvwilker/Trunks-Md' 
+var correo = 'developer.wilker.ofc@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
-global.packsticker = `°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n💫 Usuario: ${nombre}\n❄️ Bot: ${botname}\n📆 Fecha: ${fecha}\nⴵ Hora: ${moment.tz('America/Caracas').format('HH:mm:ss')}`
-global.packsticker2 = `\n°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n\n☃️ ${dev}`
+global.packsticker = `°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n🌀 Usuario: ${nombre}\n🐉 Bot: ${botname}\n📆 Fecha: ${fecha}\nⴵ Hora: ${moment.tz('America/Caracas').format('HH:mm:ss')}`
+global.packsticker2 = `\n°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n\n🐉 ${dev}`
 
 global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1 }
 }}, { quoted: m }
