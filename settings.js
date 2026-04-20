@@ -8,7 +8,7 @@ import fs from "fs"
 // CONFIGURACIÓN TRUNKS MD - MODO VIAJERO DEL TIEMPO
 // Si quieres evitar escribir el número que será bot en la consola, agrégalo aquí:
 // Solo aplica para opción 2 (ser bot con código de texto de 8 dígitos)
-global.botNumber = "584262742966" // Ejemplo: 573218138672
+global.botNumber = "" // Ejemplo: 573218138672
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
