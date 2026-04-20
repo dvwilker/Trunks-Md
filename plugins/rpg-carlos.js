@@ -37,7 +37,7 @@ const handler = async (m, { conn, args, command }) => {
     const senderName = await conn.getName(m.sender);
 
     const texto = `
-╭━━━〔 🎁 𝐑𝐄𝐂𝐎𝐌𝐏𝐄𝐍𝐒𝐀 💰 〕━━⬣ 
+╭━━━〔 🎁 RECOMPENSA 💰 〕━━⬣ 
 │ 
 │ 🗿 *Usuario:* @${senderNumber}
 │ 🗣️ *Nombre:* ${senderName}
@@ -49,7 +49,7 @@ const handler = async (m, { conn, args, command }) => {
 │ 
 │ 🕒 Próximo reclamo: *24 horas*
 │ 
-╰━━━〔 💫 𝐆𝐨𝐣𝐨𝐁𝐨𝐭 - 𝐌𝐃 🗿 〕━━⬣
+╰━━━〔 💫 TRUNKS - MD 🗿 〕━━⬣
 `;
 
     await conn.sendMessage(
@@ -61,8 +61,8 @@ const handler = async (m, { conn, args, command }) => {
           externalAdReply: {
             title: '🎁 Recompensa de GojoBot',
             body: 'Tus recompensas han sido entregadas!',
-            thumbnailUrl: 'https://files.catbox.moe/ob2s0m.jpg',
-            sourceUrl: 'https://github.com/Carlos13ra',
+            thumbnailUrl: 'https://iili.io/BrznQtV.jpg',
+            sourceUrl: 'https://github.com/dvwilker',
             mediaType: 1,
             renderLargerThumbnail: true
           }
@@ -73,9 +73,9 @@ const handler = async (m, { conn, args, command }) => {
   }
 };
 
-handler.help = ['quieropene'];
+handler.help = ['recompensa'];
 handler.tags = ['rpg'];
-handler.command = ['quieropene'];
+handler.command = ['recompensa'];
 handler.group = true;
 
 export default handler;
