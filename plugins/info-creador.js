@@ -9,7 +9,7 @@ const handler = async (m, { conn }) => {
   const correo = 'developer.wilker.ofc@gmail.com';
   const api = 'https://api-gohan.onrender.com';
   const direccion = 'Venezuela, Caracas 🇻🇪';
-  const fotoPerfil = 'https://files.catbox.moe/2vwn2d.jpg';
+  const fotoPerfil = 'https://iili.io/BrznQtV.jpg';
 
   const vcard = `
 BEGIN:VCARD
