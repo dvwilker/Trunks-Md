@@ -59,7 +59,7 @@ const handler = async (m, { conn, args, command }) => {
         mentions: [m.sender],
         contextInfo: {
           externalAdReply: {
-            title: '🎁 Recompensa de GojoBot',
+            title: '🎁 Recompensa de Trunks Md',
             body: 'Tus recompensas han sido entregadas!',
             thumbnailUrl: 'https://iili.io/BrznQtV.jpg',
             sourceUrl: 'https://github.com/dvwilker',
