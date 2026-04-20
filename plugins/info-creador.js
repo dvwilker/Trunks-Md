@@ -2,13 +2,13 @@
 import PhoneNumber from 'awesome-phonenumber';
 
 const handler = async (m, { conn }) => {
-  const name = 'GojoBot - MD | ᥆𝖿𝖿іᥴіᥲᥣ';
-  const numCreador = '51900922660';
+  const name = 'Trunks - MD | ᥆𝖿𝖿іᥴіᥲᥣ';
+  const numCreador = '5492644138998';
   const empresa = 'ɢᴏᴊᴏ ʙᴏᴛ ɪɴɪᴄ.';
-  const about = '💫 𝑫𝒆𝒔𝒂𝒓𝒓𝒐𝒍𝒍𝒂𝒅𝒐𝒓 𝒐𝒇𝒇𝒊𝒄𝒊𝒂𝒍 𝒅𝒆 𝑮𝒐𝒋𝒐𝑩𝒐𝒕 - 𝑴𝑫';
-  const correo = 'carlosramirezvillanueva30@gmail.com';
-  const web = 'https://CarlosRv.vercel.app/';
-  const direccion = 'Tokyo, Japón 🇯🇵';
+  const about = '🐉 DESARROLLADOR OFICIAL DE TRUNKS - MD';
+  const correo = 'developer.wilker.ofc@gmail.com';
+  const api = 'https://api-gohan.onrender.com';
+  const direccion = 'Venezuela, Caracas 🇻🇪';
   const fotoPerfil = 'https://files.catbox.moe/2vwn2d.jpg';
 
   const vcard = `
@@ -32,7 +32,7 @@ END:VCARD`.trim();
     displayName: name,
     vcard
   };
-  m.react('☁️');
+  m.react('🐉');
   await conn.sendMessage(m.chat, {
     contacts: {
       displayName: name,
@@ -41,7 +41,7 @@ END:VCARD`.trim();
     contextInfo: {
     mentionedJid: [m.sender],
       externalAdReply: {
-        title: '📌 ƈσɳƚαƈƚσ ԃҽ ɱι ƈɾҽαԃσɾ •💫',
+        title: '🌀 ƈσɳƚαƈƚσ ԃҽ ɱι ƈɾҽαԃσɾ •🌀',
         body: '',
         mediaType: 1,
         thumbnailUrl: fotoPerfil,
