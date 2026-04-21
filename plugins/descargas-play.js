@@ -1,111 +1,196 @@
-import yts from 'yt-search'
-import axios from 'axios'
+import yts from "yt-search"
+import fetch from "node-fetch"
 
-const handler = async (m, { conn, text, command }) => {
-  if (!text) return m.reply('🗡️ Ingresa nombre o link de YouTube, guerrero del tiempo')
+const handler = async (m, { conn, text }) => {
+  if (!text) return m.reply("🗡️ Ingresa el nombre o enlace del video de YouTube, guerrero.")
 
-  await m.react('⏳')
+  await m.react("⏳")
 
-  let search = await yts(text)
-  let video = search.videos[0]
+  try {
+    let url = text.trim()
+    let title = "Desconocido"
+    let authorName = "Desconocido"
+    let durationTimestamp = "Desconocida"
+    let views = 0
+    let thumbnail = ""
 
-  if (!video) return m.reply('❌ No se encontró el video en esta línea temporal')
+    const isUrl = /^https?:\/\/\S+/i.test(url)
 
-  const info = `
-🎬 *${video.title}*
-
-🗡️ Canal: ${video.author.name}
-⏳ Duración: ${video.timestamp}
-👁 Vistas: ${video.views.toLocaleString()}
-📅 Publicado: ${video.ago}
-🌐 Link: ${video.url}
-`.trim()
-
-  await conn.sendMessage(m.chat, {
-    image: { url: video.thumbnail },
-    caption: info
-  }, { quoted: m })
-
-  if (command === 'playaudio') {
-    try {
-      const api = `https://api-gohan.onrender.com/download/ytaudio?url=${encodeURIComponent(video.url)}`
-      const { data } = await axios.get(api)
-
-      if (!data.status) throw 'Error al obtener audio del futuro'
-
-      let fileUrl = ''
-      let fileTitle = 'audio'
-      
-      if (data.result && data.result.download_url) {
-        fileUrl = data.result.download_url
-        fileTitle = data.result.title || 'audio'
-      } else if (data.download_url) {
-        fileUrl = data.download_url
-        fileTitle = data.title || 'audio'
-      } else if (data.url) {
-        fileUrl = data.url
-        fileTitle = data.title || 'audio'
-      } else {
-        throw 'No se encontró URL de descarga válida'
+    if (isUrl) {
+      if (!isYouTubeUrl(url)) {
+        return m.reply("🚫 El enlace no es válido para la línea temporal de YouTube.")
       }
 
-      await conn.sendMessage(m.chat, {
-        audio: { url: fileUrl },
-        mimetype: 'audio/mpeg',
-        fileName: `${fileTitle}.mp3`,
-        ptt: false
-      }, { quoted: m })
-
-      await m.reply(`✅ Audio descargado del futuro\n🎼 Título: ${fileTitle}\n⏳ El poder de Trunks está en tus manos`)
-
-    } catch (e) {
-      console.log(e)
-      m.reply('❌ Error dimensional al descargar el audio: ' + (e.response?.data?.message || e.message))
-    }
-  }
-
-  if (command === 'playvideo') {
-    try {
-      const api = `https://api-gohan.onrender.com/download/ytvideo?url=${encodeURIComponent(video.url)}`
-      const { data } = await axios.get(api)
-
-      if (!data.status) throw 'Error al obtener video del futuro'
-
-      let videoUrl = ''
-      let videoTitle = ''
-      let videoQuality = 'HD'
-
-      if (data.result && data.result.download_url) {
-        videoUrl = data.result.download_url
-        videoTitle = data.result.title || video.title
-        videoQuality = data.result.quality || 'HD'
-      } else if (data.download_url) {
-        videoUrl = data.download_url
-        videoTitle = data.title || video.title
-        videoQuality = data.quality || 'HD'
-      } else if (data.url) {
-        videoUrl = data.url
-        videoTitle = data.title || video.title
-      } else {
-        throw 'No se encontró URL de descarga válida'
+      const videoId = extractVideoId(url)
+      if (!videoId) {
+        return m.reply("🚫 No pude extraer el ID del video del futuro.")
       }
 
-      await conn.sendMessage(m.chat, {
-        video: { url: videoUrl },
-        caption: `🎥 ${videoTitle}\n🗡️ Calidad: ${videoQuality}\n⏳ Trunks MD - Poder del futuro`
-      }, { quoted: m })
+      const res = await yts({ videoId })
 
-    } catch (e) {
-      console.log(e)
-      m.reply('❌ Error dimensional al descargar el video: ' + (e.response?.data?.message || e.message))
+      if (!res) {
+        return m.reply("🚫 No pude obtener información del video en esta dimensión.")
+      }
+
+      title = res.title || title
+      authorName = res.author?.name || authorName
+      durationTimestamp = res.timestamp || durationTimestamp
+      views = res.views || views
+      thumbnail = res.thumbnail || thumbnail
+      url = res.url || url
+    } else {
+      const res = await yts(url)
+
+      if (!res?.videos?.length) {
+        return m.reply("🚫 No encontré nada en esta línea temporal.")
+      }
+
+      const video = res.videos[0]
+      title = video.title || title
+      authorName = video.author?.name || authorName
+      durationTimestamp = video.timestamp || durationTimestamp
+      views = video.views || views
+      url = video.url || url
+      thumbnail = video.thumbnail || thumbnail
     }
-  }
 
-  await m.react('✅')
+    const vistas = formatViews(views)
+
+    const fallbackThumbRes = await fetch("https://i.ibb.co/83pbxQN/5eecaebbc7c3.jpg")
+    const fallbackThumb = Buffer.from(await fallbackThumbRes.arrayBuffer())
+
+    const fkontak = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        locationMessage: {
+          name: `『 ${title} 』`,
+          jpegThumbnail: fallbackThumb
+        }
+      }
+    }
+
+    const caption = `
+🎼 _𝚝𝚒́𝚝𝚞𝚕𝚘_: ${title}
+
+🗡️ _𝚌𝚊𝚗𝚊𝚕_: ${authorName}
+👁️ _𝚟𝚒𝚜𝚝𝚊𝚜_: ${vistas}
+⏳ _𝚍𝚞𝚛𝚊𝚌𝚒𝚘́𝚗_: ${durationTimestamp}
+🌐 _𝚎𝚗𝚕𝚊𝚌𝚎_: ${url}
+🐉 _Api_: https://api-gohan.onrender.com
+`
+
+    let thumb = fallbackThumb
+
+    if (thumbnail) {
+      try {
+        thumb = (await conn.getFile(thumbnail)).data
+      } catch {
+        thumb = fallbackThumb
+      }
+    }
+
+    await conn.sendMessage(
+      m.chat,
+      {
+        image: thumb,
+        caption
+      },
+      { quoted: fkontak }
+    )
+
+    await downloadMedia(conn, m, url, fkontak)
+    await m.react("✅")
+  } catch (e) {
+    console.error(e)
+    await m.reply("❌ Error dimensional: " + e.message)
+    await m.react("⚠️")
+  }
 }
 
-handler.command = ['play', 'ytvideo', 'traudio', 'trvideo', 'trunksplay']
-handler.help = ['play <texto>', 'play2 <texto>']
-handler.tags = ['descargas']
+const downloadMedia = async (conn, m, url, quotedMsg) => {
+  try {
+    const sent = await conn.sendMessage(
+      m.chat,
+      { text: "⏳ Descargando audio del futuro..." },
+      { quoted: m }
+    )
+
+    const apiUrl = `https://api-gohan.onrender.com/download/ytaudio?url=${encodeURIComponent(url)}`
+    const r = await fetch(apiUrl)
+
+    if (!r.ok) {
+      return m.reply(`🚫 Error HTTP ${r.status} al obtener el audio de esta dimensión.`)
+    }
+
+    const data = await r.json()
+    console.log("Respuesta API:", JSON.stringify(data, null, 2))
+
+    if (!data?.status || !data?.result?.download_url) {
+      return m.reply("🚫 No se pudo obtener el audio del viajero del tiempo.")
+    }
+
+    const fileUrl = data.result.download_url
+    const fileTitle = cleanName(data.result.title || "audio")
+
+    await conn.sendMessage(
+      m.chat,
+      {
+        audio: { url: fileUrl },
+        mimetype: "audio/mpeg",
+        fileName: `${fileTitle}.mp3`,
+        ptt: false
+      },
+      { quoted: quotedMsg }
+    )
+
+    try {
+      await conn.sendMessage(
+        m.chat,
+        {
+          text: `✅ Descarga completada\n\n🗡️ Título: ${fileTitle}\n⏳ El poder del futuro está en tus manos`,
+          edit: sent.key
+        }
+      )
+    } catch {
+      await m.reply(`✅ Descarga completada\n\n🗡️ Título: ${fileTitle}\n⏳ El poder del futuro está en tus manos`)
+    }
+  } catch (e) {
+    console.error(e)
+    await m.reply("❌ Error dimensional: " + e.message)
+    await m.react("💀")
+  }
+}
+
+const cleanName = (name) =>
+  String(name).replace(/[^\w\s._-]/gi, "").substring(0, 50)
+
+const formatViews = (views) => {
+  const n = Number(views)
+  if (!n || Number.isNaN(n)) return "No disponible"
+  if (n >= 1e9) return `${(n / 1e9).toFixed(1)}B`
+  if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`
+  if (n >= 1e3) return `${(n / 1e3).toFixed(1)}K`
+  return n.toString()
+}
+
+const isYouTubeUrl = (url) => {
+  return /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\//i.test(url)
+}
+
+const extractVideoId = (url) => {
+  const match =
+    url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:[?&/]|\b)/) ||
+    url.match(/youtu\.be\/([0-9A-Za-z_-]{11})/)
+  return match?.[1] || null
+}
+
+handler.command = ["play", "yt", "ytsearch", "trunksplay"]
+handler.tags = ["download"]
+handler.help = ['play'];
+handler.register = false
 
 export default handler
