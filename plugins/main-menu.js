@@ -22,11 +22,11 @@ let handler = async (m, { conn, usedPrefix }) => {
     let dia = fechaObj.toLocaleDateString('es-PE', { weekday: 'long', timeZone: 'America/Lima' })
     
     let videos = [
-        'https://qu.ax/y8TdN',
-        'https://qu.ax/lNfAb',
-        'https://qu.ax/mArAY',
-        'https://qu.ax/59rtt',
-        'https://qu.ax/GB8M7'
+        'https://files.catbox.moe/7dxbr1.mp4',
+        'https://files.catbox.moe/4j87kw.mp4',
+        'https://files.catbox.moe/kmu93h.mp4',
+        'https://files.catbox.moe/1yu00k.mp4',
+        'https://files.catbox.moe/zp19mz.mp4'
     ]
     let video = videos[Math.floor(Math.random() * videos.length)]
 const emojis = {
