@@ -104,8 +104,8 @@ const handler = async (m, { conn, text, command }) => {
   await m.react('✅')
 }
 
-handler.command = ['playaudio', 'playvideo', 'traudio', 'trvideo', 'trunksplay']
-handler.help = ['playaudio <texto>', 'playvideo <texto>']
+handler.command = ['play', 'ytvideo', 'traudio', 'trvideo', 'trunksplay']
+handler.help = ['play <texto>', 'play2 <texto>']
 handler.tags = ['descargas']
 
 export default handler
