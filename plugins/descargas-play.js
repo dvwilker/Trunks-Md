@@ -28,7 +28,7 @@ const handler = async (m, { conn, text, command }) => {
 
   if (command === 'playaudio') {
     try {
-      const api = `${global.APIs.light.url}/download/ytmp3?url=${encodeURIComponent(video.url)}`
+      const api = `${global.APIs.light.url}/download/ytaudio?url=${encodeURIComponent(video.url)}`
       const { data } = await axios.get(api)
 
       if (!data.status) throw 'Error al obtener audio'
