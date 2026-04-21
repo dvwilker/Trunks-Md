@@ -32,7 +32,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       { quoted: m }
     )
 
-    const apiUrl = `https://nexus-light-beryl.vercel.app/download/ytmp3v2?url=${encodeURIComponent(url)}`
+    const apiUrl = `https://api-gohan.onrender.com/download/ytaudio?url=${encodeURIComponent(url)}`
     const res = await fetch(apiUrl)
     const json = await res.json()
 
