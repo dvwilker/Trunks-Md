@@ -2,23 +2,23 @@ import yts from 'yt-search'
 import axios from 'axios'
 
 const handler = async (m, { conn, text, command }) => {
-  if (!text) return m.reply('🔎 Ingresa nombre o link de YouTube')
+  if (!text) return m.reply('🗡️ Ingresa nombre o link de YouTube, guerrero del tiempo')
 
   await m.react('⏳')
 
   let search = await yts(text)
   let video = search.videos[0]
 
-  if (!video) return m.reply('❌ No se encontró el video')
+  if (!video) return m.reply('❌ No se encontró el video en esta línea temporal')
 
   const info = `
 🎬 *${video.title}*
 
-👤 Canal: ${video.author.name}
-⏱ Duración: ${video.timestamp}
+🗡️ Canal: ${video.author.name}
+⏳ Duración: ${video.timestamp}
 👁 Vistas: ${video.views.toLocaleString()}
 📅 Publicado: ${video.ago}
-🔗 Link: ${video.url}
+🌐 Link: ${video.url}
 `.trim()
 
   await conn.sendMessage(m.chat, {
@@ -28,52 +28,83 @@ const handler = async (m, { conn, text, command }) => {
 
   if (command === 'playaudio') {
     try {
-      const api = `${global.APIs.light.url}/download/ytaudio?url=${encodeURIComponent(video.url)}`
+      const api = `https://api-gohan.onrender.com/download/ytaudio?url=${encodeURIComponent(video.url)}`
       const { data } = await axios.get(api)
 
-      if (!data.status) throw 'Error al obtener audio'
+      if (!data.status) throw 'Error al obtener audio del futuro'
 
-      const medias = data.result.medias || []
-      const bestAudio = medias
-        .filter(m => m.type === 'audio')
-        .sort((a, b) => (b.bitrate || 0) - (a.bitrate || 0))[0]
-
-      if (!bestAudio?.url) throw 'No se encontró audio válido'
+      let fileUrl = ''
+      let fileTitle = 'audio'
+      
+      if (data.result && data.result.download_url) {
+        fileUrl = data.result.download_url
+        fileTitle = data.result.title || 'audio'
+      } else if (data.download_url) {
+        fileUrl = data.download_url
+        fileTitle = data.title || 'audio'
+      } else if (data.url) {
+        fileUrl = data.url
+        fileTitle = data.title || 'audio'
+      } else {
+        throw 'No se encontró URL de descarga válida'
+      }
 
       await conn.sendMessage(m.chat, {
-        audio: { url: bestAudio.url },
+        audio: { url: fileUrl },
         mimetype: 'audio/mpeg',
-        fileName: `${data.result.title || 'audio'}.mp3`
+        fileName: `${fileTitle}.mp3`,
+        ptt: false
       }, { quoted: m })
+
+      await m.reply(`✅ Audio descargado del futuro\n🎼 Título: ${fileTitle}\n⏳ El poder de Trunks está en tus manos`)
 
     } catch (e) {
       console.log(e)
-      m.reply('❌ Error al descargar el audio')
+      m.reply('❌ Error dimensional al descargar el audio: ' + (e.response?.data?.message || e.message))
     }
   }
 
   if (command === 'playvideo') {
     try {
-      const api = `${global.APIs.light.url}/download/ytvideo?url=${encodeURIComponent(video.url)}`
+      const api = `https://api-gohan.onrender.com/download/ytvideo?url=${encodeURIComponent(video.url)}`
       const { data } = await axios.get(api)
 
-      if (!data.status) throw 'Error al obtener video'
+      if (!data.status) throw 'Error al obtener video del futuro'
+
+      let videoUrl = ''
+      let videoTitle = ''
+      let videoQuality = 'HD'
+
+      if (data.result && data.result.download_url) {
+        videoUrl = data.result.download_url
+        videoTitle = data.result.title || video.title
+        videoQuality = data.result.quality || 'HD'
+      } else if (data.download_url) {
+        videoUrl = data.download_url
+        videoTitle = data.title || video.title
+        videoQuality = data.quality || 'HD'
+      } else if (data.url) {
+        videoUrl = data.url
+        videoTitle = data.title || video.title
+      } else {
+        throw 'No se encontró URL de descarga válida'
+      }
 
       await conn.sendMessage(m.chat, {
-        video: { url: data.result.download },
-        caption: `🎥 ${data.result.title}\n📺 Calidad: ${data.result.quality}`
+        video: { url: videoUrl },
+        caption: `🎥 ${videoTitle}\n🗡️ Calidad: ${videoQuality}\n⏳ Trunks MD - Poder del futuro`
       }, { quoted: m })
 
     } catch (e) {
       console.log(e)
-      m.reply('❌ Error al descargar el video')
+      m.reply('❌ Error dimensional al descargar el video: ' + (e.response?.data?.message || e.message))
     }
   }
 
   await m.react('✅')
 }
 
-handler.command = ['playaudio', 'playvideo']
+handler.command = ['playaudio', 'playvideo', 'traudio', 'trvideo', 'trunksplay']
 handler.help = ['playaudio <texto>', 'playvideo <texto>']
 handler.tags = ['descargas']
 
