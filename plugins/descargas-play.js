@@ -2,7 +2,7 @@ import yts from "yt-search"
 import fetch from "node-fetch"
 
 const handler = async (m, { conn, text }) => {
-  if (!text) return m.reply("🗡️ Ingresa el nombre o enlace del video de YouTube, guerrero.")
+  if (!text) return m.reply("🗡️ busca por nombre una música de YouTube Guerrero ejemplo .play hola remix, guerrero.")
 
   await m.react("⏳")
 
@@ -23,13 +23,13 @@ const handler = async (m, { conn, text }) => {
 
       const videoId = extractVideoId(url)
       if (!videoId) {
-        return m.reply("🚫 No pude extraer el ID del video del futuro.")
+        return m.reply("🚫 No pude extraer el ID del audio del futuro.")
       }
 
       const res = await yts({ videoId })
 
       if (!res) {
-        return m.reply("🚫 No pude obtener información del video en esta dimensión.")
+        return m.reply("🚫 No pude obtener información del audio en esta dimensión.")
       }
 
       title = res.title || title
